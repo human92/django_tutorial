@@ -15,5 +15,6 @@ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "mysite.settings")
 
 application = get_wsgi_application()
 
-from whitenoise.django import DjangoWhiteNoise
-application = DjangoWhiteNoise(application)
+# whitenoiseでのエラー回避（4.0より仕様変更）
+# from whitenoise.django import DjangoWhiteNoise
+# application = DjangoWhiteNoise(application)
