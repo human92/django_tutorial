@@ -121,9 +121,9 @@ USE_TZ = False
 STATIC_URL = '/static/'
 
 # 追加分
-import dj_database_url
+import dj-database-url
 
-DATABASES['default'] = dj_database_url.config()
+DATABASES['default'] = dj-database-url.config()
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
