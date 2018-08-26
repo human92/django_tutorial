@@ -135,9 +135,27 @@ DEBUG = False
 # Additional locations of static files
 ROOT_PATH = os.path.dirname(__file__)
 
-STATICFILES_DIRS = (
-    [os.path.join(ROOT_PATH, 'static')]
-)
+
+# Windows機なのでPathを変換
+
+# XXX = (
+# os.path.join(ROOT_PATH, 'static')
+
+# YYY = XXX.replace(os.path.sep, '/')
+
+# STATICFILES_DIRS=(
+#     [YYY]
+# )
+
+# 前のやつ（無理やったら絶対path)↓
+
+STATICFILES_DIRS = [
+    'C:/Users/Kai Kodama/djangogirls/static'
+]
+
+# STATICFILES_DIRS = (
+#     [os.path.join(ROOT_PATH, 'static')]
+# )
 
 try:
     from .local_settings import *
