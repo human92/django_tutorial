@@ -23,10 +23,6 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '@zxdkqntuy%#7(mz+5&38uzr3upd($p^_+a-wu5=ij%j*&$qx2'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
-
-# ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -121,7 +117,7 @@ USE_TZ = False
 
 STATIC_URL = '/static/'
 
-# 追加分
+# Tutorialでの追加分
 import dj_database_url
 
 DATABASES['default'] = dj_database_url.config()
@@ -132,30 +128,13 @@ ALLOWED_HOSTS = ['*']
 
 DEBUG = True
 
-# Additional locations of static files
 ROOT_PATH = os.path.dirname(__file__)
 
 
-# Windows機なのでPathを変換
-
-# XXX = (
-# os.path.join(ROOT_PATH, 'static')
-
-# YYY = XXX.replace(os.path.sep, '/')
-
-# STATICFILES_DIRS=(
-#     [YYY]
-# )
-
-# 前のやつ（無理やったら絶対path)↓
-
+# 絶対Path参照は今後修正要
 STATICFILES_DIRS = [
     'C:/Users/Kai Kodama/djangogirls/static'
 ]
-
-# STATICFILES_DIRS = (
-#     [os.path.join(ROOT_PATH, 'static')]
-# )
 
 try:
     from .local_settings import *
